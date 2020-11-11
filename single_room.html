@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <meta name="dicscription" content="網頁的簡介">
+  <meta name="keyword" content="キーワード">
+  <meta name="author" content="製作人or公司名稱">
+  <meta name="copyright" content="版權">
+  <meta name="format-detection" content="telephone=no">
+  <title>Hotel reservation</title>
+  <link rel="stylesheet" href="dist/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.js'></script>
+  
+</head> 
+
+<body>
+  <header>
+    <div class="info__header--left">
+    </div>
+    <div class="info__header--right">
+      <div class="info__header--right-top"></div>
+      <div class="info__header--right-button"></div>
+    </div>
+    <img src="/image/index_icon/logo_block.svg" alt="" class="logoimg">
+  </header>
+  <div class="info__container">
+    <div class="info__container--left">
+      <div class="info--room-infomation">
+        <h2 class='info--room-name'>請問，阮經天的舅公是誰？
+        </h2>
+        <p class='room--people-limit room--infos'>房客人數限制： 1~1 人</p>
+        <p class='room--bed-type room--infos'>床型：單人床</p>
+        <p class='room--bath-num room--infos'>衛浴數量： 1 間</p>
+        <p class='room--room-size room--infos'>房間大小： 18 平方公尺</p>
+        <p class='room--type-info'>
+          Single Room is only reserved for one guest. There is a bedroom with a single size bed and a private bathroom.
+          Everything you need prepared for you: sheets and blankets, towels, soap and shampoo, hairdryer are provided.
+          In the room there is AC and of course WiFi.
+        </p>
+        <h5 class="border_decoretion">＼＼＼
+        </h5>
+        <div class="room--check-group">
+          <div class="checkIn-group">
+            <h3>Check In</h3>
+            <h4>15:00　−　21:00</h3>
+          </div>
+          <div class="checkOut-group">
+            <h3>Check Out</h3>
+            <h4>10:00</h3>
+          </div>
+        </div>
+        <ul class="room--facilities">
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/wifi.svg" alt="">
+            <span>Wi-Fi</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/phone.svg" alt="">
+            <span>電話</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/mountain-range.svg" alt="">
+            <span>漂亮的視野</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/breakfast.svg" alt="">
+            <span>早餐</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/breeze.svg" alt="">
+            <span>空調</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/no-smoke-symbol.svg" alt="">
+            <span>禁止吸煙</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/bar.svg" alt="">
+            <span>Mini Bar</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/refIcon.svg" alt="">
+            <span>冰箱</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/crawling-baby-silhouette.svg" alt="">
+            <span>適合兒童</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/room_service.svg" alt="">
+            <span>Room Service</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/sofaIcon.svg" alt="">
+            <span>沙發</span>
+          </li>
+          <li class='facilities-wifi'>
+            <img src="/image/info_icon/dog.svg" alt="">
+            <span>寵物攜帶</span>
+          </li>
+        </ul>
+      </div>
+      <div class="info--room-price">
+        <h3 class='normal-day-peice'>NT.1380</h3>
+        <p class='day-info normal-day'>平日(一~四)</p>
+        <h4 class="weekend-day-price">NT.1500</h4>
+        <p class="day-info weekend-day">假日(五~日)</p>
+      </div>
+    </div>
+    <div class="info__container--right">
+      <div class="ui-datepicker-wrapper">
+        <!-- 頭部，可以選擇前後月 -->
+        <div class="ui-datepicker-header">
+            <a href="#" class="ui-datepicker-btn ui-datepicker-prev-btn">〈</a>
+            <a href="#" class="ui-datepicker-btn ui-datepicker-next-btn">〉</a>
+            <!-- 現在的月份 -->
+            <span class="ui-datepicker-curr-month">2019 / 8</span>
+        </div>
+        <!-- 顯示日曆 -->
+        <div class="ui-datepicker-body">
+            <table>
+                <!-- 日曆顯示星期 -->
+            <thead>
+                    <tr class="week">
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                        <th>日</th>
+                    </tr>
+                </thead>
+                <!-- 日曆本體 -->
+                <tbody>
+                    <tr>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="booking_room">
+      <input type="button" value="預約時段" class="booking_btn">
+      <img src="image/index_icon/border_black2.svg" alt="">
+      <form action="" onsubmit="return Test();" class="btnform">
+        <label for="name">姓名</label>
+        <input type="text" id="name" required="required" placeholder="請輸入您的姓名">
+        <br>
+        <label for="phone">電話</label>
+        <input type="text" id="phone" placeholder="請輸入您的電話">
+        <button id="btn">送出</button>
+        <!-- <input type="button" id="btn">送出 -->
+      </form>
+    </div>
+    </div>
+  </div>
+  <!-- <script src="js/all.js"></script> -->
+  <script src="js/all2.js"></script>
+  <!-- <script src="js/index2.js"></script> -->
+</body>
+
+</html>
